@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package test;
+
+enum Foo {
+  option allow_alias = true;
+
+  BAR = 1;
+  ZAA = 2;
+
+  DEFAULT = 1;
+}
+
+message MyMessage {
+  optional Foo f = 1 [ default = DEFAULT ];
+}
